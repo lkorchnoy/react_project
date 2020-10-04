@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
 
-import { videosReducers } from './videosReducer'
-import { commentsReducers } from './commentsReducer'
+import { videosReducer } from './videosReducer'
+import { commentsReducer } from './commentsReducer'
 
 export const rootReducer = combineReducers({
-   videos: videosReducers,
-   comments: commentsReducers 
+   videos: videosReducer,
+   comments: commentsReducer
 })
