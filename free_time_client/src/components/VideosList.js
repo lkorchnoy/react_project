@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { selectvideo } from '../actions/videosActions'
+import { selectVideo } from '../actions/videosActions'
 
 const VideosList = (props) => {
     const listItems = props.videos.map((video) => {

@@ -3,7 +3,8 @@ import { connect } from 'react-redux'
 
 import { fetchVideos } from '../actions/videosActions'
 import VideosList from './VideosList'
-import VideosForm from './VideosForm';
+import VideosDetails from './VideosDetails'
+import VideosForm from './VideosForm'
 
 class VideosContainer extends Component {
 
@@ -12,11 +13,12 @@ class VideosContainer extends Component {
     }
     render() {
         return (
-            <div>
+            
+            <div className="container">
                 Videos Container 
-                <VideosForm />
+                <VideosDetails />
                 <VideosList />
-
+                <VideosForm />
             </div>
         );
     }

@@ -9,7 +9,7 @@ export const videosReducer = (state = [], action) => {
 
 export const selectedVideoReducer = (state = null, action) => {
     switch(action.type) {
-        case 'MOVIE_SELECTED':
+        case 'VIDEO_SELECTED':
             return action.payload 
          default:
              return state    
