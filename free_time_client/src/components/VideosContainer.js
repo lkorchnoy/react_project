@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
 import { fetchVideos } from '../actions/videosActions'
-import VideosList from './VideosList'
-import VideosDetails from './VideosDetails'
 
+import VideosDetails from './VideosDetails'
+import VideosList from './VideosList'
 import VideosForm from './VideosForm'
-//import VideosFormInput from './VideosFormInput'
+
 
 class VideosContainer extends Component {
 

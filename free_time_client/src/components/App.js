@@ -1,5 +1,5 @@
 import React from 'react';
-import Router from './Router'
+import Routing from './Routing'
 
 import VideosContainer from './VideosContainer'
 import CommentsContainer from './CommentsContainer';
@@ -8,9 +8,8 @@ import CommentsContainer from './CommentsContainer';
 const App = () => {
     return (
         <div>
-            <VideosContainer />
-            <CommentsContainer />
-            <Router />
+
+            <Routing />
         </div>
     );
 }

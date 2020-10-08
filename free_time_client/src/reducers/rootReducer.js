@@ -6,6 +6,6 @@ import { selectedVideoReducer } from './videosReducer'
 
 export const rootReducer = combineReducers({
    videos: videosReducer,
-   selectedVideo: selectedVideoReducer,
-   inputMirror: inputMirrorReducer
+   selectedVideo: selectedVideoReducer
+   
 })

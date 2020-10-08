@@ -21,7 +21,3 @@ export const selectedVideoReducer = (state = null, action) => {
 
 
 
-export const inputMirrorReducer = (state = null, action) => {
-    console.log('reducer', action);
-    return state;
-}

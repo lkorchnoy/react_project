@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import CommentsContainer from './CommentsContainer';
+import VideosList from './VideosList'
 
 const VideosDetails = (props) => {
   if (!props.selectedVideo) {
@@ -24,7 +25,7 @@ const VideosDetails = (props) => {
           </p>
           <p>Creator: {props.selectedVideo.creator}</p>
           <CommentsContainer videoId={props.selectedVideo.id}/>
-        </div>
+          </div>
       </div>
     );
   }

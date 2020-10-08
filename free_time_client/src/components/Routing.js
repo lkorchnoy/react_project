@@ -10,12 +10,12 @@ import VideosForm from './VideosForm'
 
 import CommentsContainer from './CommentsContainer'
 
-const Router = () => {
+const Routing = () => {
     return (
        <Switch>
-           <Route exact path='/' component={Home} />
-           <Route path='/about' component={About} />
-           <Route path='/videos' component={VideosContainer} />
+           <Route exact path='/' component={VideosContainer} />
+           <Route exact path='/about' component={About} />
+           {/* <Route path='/videos' component={VideosContainer} /> */}
            <Route path='/list' component={VideosDetails} />
            <Route path='/form' component={VideosForm} />
            <Route path='/comments' component={CommentsContainer} />
@@ -28,4 +28,4 @@ const Router = () => {
     );
 }
 
-export default Router;
+export default Routing;

@@ -1,3 +1,3 @@
 class Video < ApplicationRecord
-    has_many :comments, dependent: :destroy
+    has_many :comments
 end
