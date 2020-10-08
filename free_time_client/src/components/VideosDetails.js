@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import CommentsContainer from './CommentsContainer';
 
 const VideosDetails = (props) => {
   if (!props.selectedVideo) {
@@ -22,6 +23,7 @@ const VideosDetails = (props) => {
             Link: <a target="_blank" href={props.selectedVideo.link}>{props.selectedVideo.link}</a>
           </p>
           <p>Creator: {props.selectedVideo.creator}</p>
+          <CommentsContainer videoId={props.selectedVideo.id}/>
         </div>
       </div>
     );

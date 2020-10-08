@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
-import { fetchComments } from '../actions/commentsActions'
-import CommentsForm from './CommentsForm'
-import CommentsList from './CommentsList'
+import { fetchComments, addComment } from '../actions/commentsActions'
+
+import CommentInput from './CommentInput'
 
 class CommentsContainer extends Component {
 
@@ -14,11 +14,12 @@ class CommentsContainer extends Component {
         return (
             <div>
                 Comments Container
-                <CommentsForm />
-                <CommentsList />
+                <CommentInput addComment={this.props.addComment} videoId={this.props.videoId}/>
             </div>
         );
     }
 }
 
-export default connect(null, { fetchComments })(CommentsContainer);
+
+
+export default connect(null, { fetchComments, addComment })(CommentsContainer);

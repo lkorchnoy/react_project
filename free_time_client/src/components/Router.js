@@ -8,7 +8,7 @@ import VideosDetails from './VideosDetails'
 import VideosForm from './VideosForm'
 
 
-//import CommentsContainer from './CommentsContainer';
+import CommentsContainer from './CommentsContainer'
 
 const Router = () => {
     return (
@@ -18,6 +18,8 @@ const Router = () => {
            <Route path='/videos' component={VideosContainer} />
            <Route path='/list' component={VideosDetails} />
            <Route path='/form' component={VideosForm} />
+           <Route path='/comments' component={CommentsContainer} />
+           
            
            
        </Switch>
