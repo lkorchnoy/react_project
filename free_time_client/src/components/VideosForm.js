@@ -23,9 +23,20 @@ class VideosForm extends Component {
     handleSubmit = event => {
         event.preventDefault()
         this.props.addVideo(this.state)
+        this.resetForm()
+    }
+
+    resetForm = () => {
+        this.setState({
+            category: '',
+            description: '',
+            link: '',
+            creator: ''
+        })
     }
 
     render() {
+        console.log(this.state.creator)
         return (
             <form onSubmit={ this.handleSubmit }>
                 <label>category:</label>

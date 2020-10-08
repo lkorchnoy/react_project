@@ -46,6 +46,6 @@ class VideosController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def video_params
-      params.require(:video).permit(:category, :description, :linkcreator)
+      params.require(:video).permit(:category, :description, :link, :creator)
     end
 end

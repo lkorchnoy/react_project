@@ -2,6 +2,9 @@ export const videosReducer = (state = [], action) => {
     switch(action.type){
         case 'FETCH_VIDEOS':
             return action.payload
+        case 'ADD_VIDEO':
+            return [...state, action.payload]
+        
             default:
                 return state 
     }
@@ -14,4 +17,11 @@ export const selectedVideoReducer = (state = null, action) => {
          default:
              return state    
     }
+}
+
+
+
+export const inputMirrorReducer = (state = null, action) => {
+    console.log('reducer', action);
+    return state;
 }
