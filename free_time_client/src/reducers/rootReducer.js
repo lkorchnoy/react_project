@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux'
+import { commentsReducer } from './commentsReducer'
 
 import { inputMirrorReducer, videosReducer } from './videosReducer'
 import { selectedVideoReducer } from './videosReducer'
@@ -6,6 +7,7 @@ import { selectedVideoReducer } from './videosReducer'
 
 export const rootReducer = combineReducers({
    videos: videosReducer,
-   selectedVideo: selectedVideoReducer
+   selectedVideo: selectedVideoReducer,
+   comments: commentsReducer
    
 })

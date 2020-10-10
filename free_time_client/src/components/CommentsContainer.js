@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { fetchComments, addComment } from '../actions/commentsActions'
 
 import CommentInput from './CommentInput'
+import CommentsList from './CommentsList';
 
 class CommentsContainer extends Component {
 
@@ -15,6 +16,7 @@ class CommentsContainer extends Component {
             <div>
                 Comments Container
                 <CommentInput addComment={this.props.addComment} videoId={this.props.videoId}/>
+                <CommentsList videoId={this.props.videoId} />
             </div>
         );
     }
