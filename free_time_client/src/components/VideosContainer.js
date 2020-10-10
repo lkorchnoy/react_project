@@ -6,6 +6,7 @@ import { fetchVideos } from '../actions/videosActions'
 import VideosDetails from './VideosDetails'
 import VideosList from './VideosList'
 import VideosForm from './VideosForm'
+import './Videos.css'
 //import { Route } from 'react-router-dom'
 
 

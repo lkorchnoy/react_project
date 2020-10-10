@@ -38,6 +38,7 @@ class VideosForm extends Component {
     render() {
         console.log(this.state.creator)
         return (
+            <div className="videos">
             <form onSubmit={ this.handleSubmit }>
                 <label>category:</label>
                 <input type='text' value={this.state.category} onChange={this.handleChange} name="category"/>
@@ -54,6 +55,7 @@ class VideosForm extends Component {
 
                 <input type='submit' value="Create Video" />
             </form>
+            </div>
                 
             
         );
