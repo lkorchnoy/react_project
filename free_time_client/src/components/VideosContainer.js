@@ -7,25 +7,29 @@ import VideosDetails from './VideosDetails'
 import VideosList from './VideosList'
 import VideosForm from './VideosForm'
 import './Videos.css'
+import Image from '../image.jpg'
 //import { Route } from 'react-router-dom'
 
 
 class VideosContainer extends Component {
-
-    componentDidMount() {
+    
+        componentDidMount() {
         this.props.fetchVideos()
     }
+
+    
+
     render() {
         return (
             
             <div className="container">
-                Videos Container 
                 <VideosDetails />
+                <img src={Image} alt="An image"/>
                 <VideosList />
                 <VideosForm />
-                
             </div>
         );
+
     }
 }
 

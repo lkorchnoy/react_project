@@ -4,7 +4,7 @@ const About = () => {
     return (
         <div>
             About Us 
-            Free time is a new age technology app. Create and share your your music videos on Free time. Have an awesome time with free time!
+            Free time is a new age technology app. Create and share your your music videos on Free Time. Have an awesome time with Free Time!
         </div>
     );
 }

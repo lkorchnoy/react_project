@@ -7,16 +7,16 @@ const VideosDetails = (props) => {
   if (!props.selectedVideo) {
     return (
       <div className="details-container" style={{ width: "60%" }}>
-        <h1>Video</h1>
+        <h1>Free Time App</h1>
         <div className="properties">
-          <p>Select Video</p>
+          <p>Have an awesome time with Free Time! Select Video</p>
         </div>
       </div>
     );
   } else {
     return (
       <div className="details-container" style={{ width: "60%" }}>
-        <h1>Video</h1>
+        <h1>Free Time App</h1>
         <div className="properties">
           <p>Category: {props.selectedVideo.category}</p>
           <p>Description: {props.selectedVideo.description}</p>

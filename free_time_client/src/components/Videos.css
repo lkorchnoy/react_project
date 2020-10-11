@@ -1,13 +1,23 @@
 body{
     background: pink;
     transition: all 1s;
-    background-image: url("https://unsplash.com/photos/z9z6u1rn7sY");
-    background-position: center;
+    
+    
 }
 
 .videos form{
     background: fff;
     padding: 20px;
     font-size: 25px;
+}
+
+
+.container img{
+    float: right;
+    width: 50%;
+    height: auto;
+    padding: 20px;
+    object-fit: contain; 
+    opacity: 0.6;
 }
 
