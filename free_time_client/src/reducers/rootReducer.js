@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 import { commentsReducer } from './commentsReducer'
 
-import { inputMirrorReducer, videosReducer } from './videosReducer'
+import { videosReducer } from './videosReducer'
 import { selectedVideoReducer } from './videosReducer'
 //import { commentsReducer } from './commentsReducer'
 
