@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import { Switch, Route } from 'react-router-dom'
 
 import { fetchVideos } from '../actions/videosActions'
 
@@ -23,7 +24,8 @@ class VideosContainer extends Component {
         return (
             
             <div className="container">
-                <VideosDetails />
+                
+                
                 <img src={Image} alt="An image"/>
                 <VideosList />
                 <VideosForm />

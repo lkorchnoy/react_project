@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { selectVideo } from '../actions/videosActions'
+import { Link } from 'react-router-dom'
 
 
 const VideosList = (props) => {
@@ -8,7 +9,7 @@ const VideosList = (props) => {
         return (
             <div>
                 <span>{video.creator}</span>
-                <button onClick={() => props.selectVideo(video)}>details</button>
+             <Link to={`/videos/${video.id}`}>see details</Link>
             </div>
         )
     })
