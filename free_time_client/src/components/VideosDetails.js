@@ -1,24 +1,12 @@
 import React from "react";
-import { connect } from "react-redux";
+//import { connect } from "react-redux";
 import CommentsContainer from './CommentsContainer';
 import VideosList from './VideosList'
 //import { useParams } from "react-router-dom"
 
 const VideosDetails = (props) => {
-    
-   //const { id } = useParams() 
-   //const vid = props.videos.find(video => video.id === parseInt(id))
-    //props.selectedVideo.id = parseInt(id)
-  if (!props.selectedVideo) {
-    return (
-      <div className="details-container" style={{ width: "60%" }}>
-        <h1>Free Time App</h1>
-        <div className="properties">
-          <p>Have an awesome time with Free Time! Select Video</p>
-        </div>
-      </div>
-    );
-  } else {
+    //debugger;
+   
     return (
       <div className="details-container" style={{ width: "60%" }}>
         <h1>Free Time App</h1>
@@ -34,12 +22,8 @@ const VideosDetails = (props) => {
       </div>
     );
   }
-};
 
-const mapStateToProps = (state) => {
-  return {
-    selectedVideo: state.selectedVideo,
-  };
-};
 
-export default connect(mapStateToProps)(VideosDetails);
+
+
+export default VideosDetails;

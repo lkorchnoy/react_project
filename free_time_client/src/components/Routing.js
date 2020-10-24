@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 
@@ -11,14 +11,19 @@ import VideosDetails from './VideosDetails'
 
 
 
-const Routing = (props) => {
+class Routing extends Component {
+    render() {
     //debugger;
     return (
        <Switch>
+
+           <Route exact path='/' component={VideosContainer} />
+           <Route exact path='/about' component={About} />
+           <Route path='/form' component={VideosForm} />
            
-           <Route path="/videos/:id" render={(props) => {
+           <Route exact path="/videos/:id" render={(props) => {
                 return (
-                    <VideosDetails video={props.videos.find(
+                    <VideosDetails video={this.props.videos.find(
                         video => video.id === props.match.params.id 
                     )}
                     />
@@ -26,9 +31,7 @@ const Routing = (props) => {
                 }}
                 />
                 
-           <Route exact path='/' component={VideosContainer} />
-           <Route exact path='/about' component={About} />
-           <Route path='/form' component={VideosForm} />
+           
            
            
            
@@ -37,6 +40,7 @@ const Routing = (props) => {
             
     
     );
+}
 }
 
 const mapStateToProps = (state) => {
