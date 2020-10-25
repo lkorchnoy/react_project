@@ -12,24 +12,24 @@ import VideosDetails from './VideosDetails'
 
 
 class Routing extends Component {
+
     render() {
     //debugger;
     return (
+        <>
        <Switch>
 
            <Route exact path='/' component={VideosContainer} />
            <Route exact path='/about' component={About} />
            <Route path='/form' component={VideosForm} />
+           {/* <Route exact path="/videos/:id" component={VideosDetails} /> */}
+               
            
-           <Route exact path="/videos/:id" render={(props) => {
-                return (
-                    <VideosDetails video={this.props.videos.find(
-                        video => video.id === props.match.params.id 
-                    )}
-                    />
-                );
-                }}
-                />
+           
+           <Route path="/videos/:id" render={() => 
+                <VideosDetails videos={this.props.videos} />}
+                
+            />
                 
            
            
@@ -37,16 +37,12 @@ class Routing extends Component {
            
            
        </Switch>
-            
-    
-    );
-}
+       </>
+       
+        );
+    }
 }
 
-const mapStateToProps = (state) => {
-    return {
-      videos: state.videos
-    }
-  }
+const mapStateToProps = ({ videos }) => ({ videos })
 
 export default connect(mapStateToProps)(Routing);

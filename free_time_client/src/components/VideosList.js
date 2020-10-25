@@ -6,12 +6,12 @@ import { Link } from 'react-router-dom'
 
 const VideosList = (props) => {
     const listItems = props.videos.map((video) => {
-        return (
-            <div>
-                <span>{video.creator}</span>
-             <Link to={`/videos/${video.id}`}>see details</Link>
+        return <div key={video.id} className="vidList">
+            
+                {/* <span>{video.creator}</span> */}
+             <Link to={`/videos/${video.id}`}>{video.creator}</Link>
             </div>
-        )
+        
     })
 
     return (

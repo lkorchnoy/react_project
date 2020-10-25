@@ -22,7 +22,7 @@ class VideosContainer extends Component {
 
     render() {
         return (
-            
+            <>
             <div className="container">
                 
                 
@@ -30,11 +30,15 @@ class VideosContainer extends Component {
                 <VideosList />
                 <VideosForm />
             </div>
+
+            </>
         );
 
     }
 }
 
+const mapStateToProps = ({ videos }) => ({ videos })
 
 
-export default connect(null, { fetchVideos })(VideosContainer);
+
+export default connect(mapStateToProps, { fetchVideos })(VideosContainer);
