@@ -8,9 +8,9 @@ const VideosList = (props) => {
     const listItems = props.videos.map((video) => {
         return <div key={video.id} className="vidList">
             
-                {/* <span>{video.creator}</span> */}
-             <Link to={`/videos/${video.id}`}>{video.creator}</Link>
-            </div>
+        <Link to={`/videos/${video.id}`}>{video.creator}</Link>
+        
+        </div>
         
     })
 

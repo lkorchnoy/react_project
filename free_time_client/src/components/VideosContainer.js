@@ -24,8 +24,6 @@ class VideosContainer extends Component {
         return (
             <>
             <div className="container">
-                
-                
                 <img src={Image} alt="An image"/>
                 <VideosList />
                 <VideosForm />
