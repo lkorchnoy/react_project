@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import { Switch, Route } from 'react-router-dom'
 
 import { fetchVideos } from '../actions/videosActions'
 
@@ -21,18 +22,21 @@ class VideosContainer extends Component {
 
     render() {
         return (
-            
+            <>
             <div className="container">
-                <VideosDetails />
                 <img src={Image} alt="An image"/>
                 <VideosList />
                 <VideosForm />
             </div>
+
+            </>
         );
 
     }
 }
 
+const mapStateToProps = ({ videos }) => ({ videos })
 
 
-export default connect(null, { fetchVideos })(VideosContainer);
+
+export default connect(mapStateToProps, { fetchVideos })(VideosContainer);

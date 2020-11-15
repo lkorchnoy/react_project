@@ -1,16 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { selectVideo } from '../actions/videosActions'
+import { Link } from 'react-router-dom'
 
 
 const VideosList = (props) => {
     const listItems = props.videos.map((video) => {
-        return (
-            <div>
-                <span>{video.creator}</span>
-                <button onClick={() => props.selectVideo(video)}>details</button>
-            </div>
-        )
+        return <div key={video.id} className="vidList">
+            
+        <Link to={`/videos/${video.id}`}>{video.creator}</Link>
+        
+        </div>
+        
     })
 
     return (

@@ -5,12 +5,13 @@ import { addVideo } from '../actions/videosActions'
 
 class VideosForm extends Component {
 
-    state = {
-        category: '',
-        description: '',
-        link: '',
-        creator: ''
-    }
+state = {
+    category: '',
+    description: '',
+    link: '',
+    creator: ''
+};
+
 
     handleChange = event => {
         const { name, value } = event.target 
